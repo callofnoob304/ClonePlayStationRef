@@ -6,7 +6,22 @@
 
 // Composables
 import { createRouter, createWebHistory } from 'vue-router/auto'
-import { routes } from 'vue-router/auto-routes'
+import Loja from '../pages/loja.vue'
+import LoginPage from '../pages/loginPage.vue'
+// import { routes } from 'vue-router/auto-routes'
+
+const routes = [
+  {
+    path: '/',
+    name: 'loginPage',
+    component: LoginPage,
+  },
+  {
+    path: '/loja',
+    name: 'loja',
+    component: Loja,
+  }
+]
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
