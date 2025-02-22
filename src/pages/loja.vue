@@ -50,18 +50,20 @@
       }
     },
 
+    mounted() {
+      setTimeout(() => {
+        alert("Seja bem vindo a loja!");
+      }, 700 );
+    },
+
     methods: {
       
     },
   }
 </script>
 
-<style>
+<style scoped>
   .v-row {
     margin: 0px !important;
-  }
-
-  .v-text-field {
-    width: 100px;
   }
 </style>

@@ -60,12 +60,23 @@ export default defineComponent({
 
   methods: {
     validaLogin(): void {
-      if (this.email != 'teste@gmail.com' && this.senha != '1234') {
-        alert("E-mail ou senha incorretos! Tente novamente.");
+      if (this.login) {
+        if (this.email != 'teste@gmail.com' && this.senha != '1234') {
+          alert("E-mail ou senha incorretos! Tente novamente.");
+          this.email = null;
+          this.senha = null;
+          return;
+        };
+
+        this.$router.push({ name: 'loja' });
         return;
       };
       
-      this.$router.push({ name: 'loja' });
+      alert('Cadastrado com sucesso!');
+      this.login = true;
+      this.nome = null;
+      this.email = null;
+      this.senha = null;
     },
 
     controlaFormulario(): void {
@@ -80,7 +91,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
   .v-row {
     margin: 0px !important;
   }
