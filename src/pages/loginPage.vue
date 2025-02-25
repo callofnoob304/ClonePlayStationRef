@@ -61,7 +61,7 @@ export default defineComponent({
   methods: {
     validaLogin(): void {
       if (this.login) {
-        if (this.email == 'teste@gmail.com' && this.senha == '1234') {
+        if (this.email === 'teste@gmail.com' && this.senha === '1234') {
           this.$router.push({ name: 'loja' });
           return;
         };

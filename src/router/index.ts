@@ -8,18 +8,17 @@
 import { createRouter, createWebHistory } from 'vue-router/auto'
 import Loja from '../pages/loja.vue'
 import LoginPage from '../pages/loginPage.vue'
-// import { routes } from 'vue-router/auto-routes'
 
 const routes = [
   {
     path: '/',
-    name: 'loginPage',
-    component: LoginPage,
-  },
-  {
-    path: '/loja',
     name: 'loja',
     component: Loja,
+  },
+  {
+    path: '/loginPage',
+    name: 'login',
+    component: LoginPage,
   }
 ]
 
