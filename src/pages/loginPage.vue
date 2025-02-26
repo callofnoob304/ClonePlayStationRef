@@ -1,7 +1,7 @@
 <template>
-  <v-row class="h-screen">
-    <v-col class="d-flex justify-center align-center">
-      <v-card class="w-25 rounded-ts-xl rounded-be-xl" elevation="8">
+  <v-row class="h-screen justify-center">
+    <v-col cols="12" md="7" sm="12" class="d-flex justify-center align-center">
+      <v-card class="w-50 rounded-ts-xl rounded-be-xl" elevation="8">
         <v-card-title
         class="text-center"
         >
@@ -31,11 +31,11 @@
           ></v-text-field>
           <v-row class="justify-space-around">
             <v-btn
-              class="bg-primary w-25"
+              class="bg-primary w-auto mb-5"
               @click="controlaFormulario"
             >{{ login ? "Cadastro" : "Login" }}</v-btn>
             <v-btn
-              class="bg-success w-25"
+              class="bg-success w-auto"
               @click="validaLogin"
             >{{ login ? "Entrar" : "Cadastrar" }}</v-btn>
           </v-row>
