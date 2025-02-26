@@ -41,7 +41,7 @@
       <v-carousel
         v-model="currentImageIndex"
         class="h-auto"
-        :show-arrows="false"
+        show-arrows="hover"
         cycle
         hide-delimiter-background
         delimiter-icon="mdi-minus"
@@ -55,15 +55,15 @@
       </v-carousel>
 
       <!-- Alternantes do carrosel -->
-      <v-row>
+      <v-row class="justify-center">
         <v-col
           v-for="(image, index) in images"
           :key="index"
           cols="12"
-          sm="4"
+          sm="6"
           md="4"
           lg="4"
-          class="d-flex justify-center mt-10"
+          class="d-flex justify-center mt-5"
         >
           <v-hover v-slot:default="{ props: hoverProps, isHovering }">
             <v-img
@@ -80,7 +80,7 @@
       </v-row>
 
       <!-- PlayStaion 5 -->
-      <v-row class="py-10 align-center justify-center">
+      <v-row class="align-center justify-center">
         <v-col cols="12" sm="12" md="5" lg="5" class="text-center">
           <h1>Console de última geração</h1>
           <h3 class="mb-5 mt-5">
@@ -95,7 +95,7 @@
       </v-row>
 
       <!-- Produtos -->
-      <v-row class="py-10 d-flex aling-center justify-center mb-10">
+      <v-row class="d-flex aling-center justify-center mb-10">
         <v-col
           v-for="i in products"
           :key="i.names"
@@ -106,7 +106,7 @@
           class="d-flex flex-column justify-center align-self-center text-center"
         >
           <v-img :src="i.pictures" max-height="181" />
-          <span class="mt-8 font-weight-medium text-h5">{{ i.names }}</span>
+          <span class="py-10 font-weight-medium text-h5">{{ i.names }}</span>
         </v-col>
       </v-row>
 
@@ -129,7 +129,7 @@
       <!-- Footer -->
       <v-footer class="text-center align-start bg-black">
         <v-row>
-          <v-col cols="12" sm="12" md="12" class="text-end">
+          <v-col cols="12" sm="12" md="12" class="text-center">
             <v-btn icon="mdi-arrow-up" @click="scrollToTop" />
           </v-col>
           <v-col cols="12" sm="6" md="2">
